@@ -38,5 +38,47 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const codeImg = document.getElementById('cta-img');
+codeImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const snippetsImg = document.getElementById('middle-img');
+snippetsImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+const navList = document.querySelectorAll('a');
+navList[0].innerHTML = siteContent['nav']['nav-item-1'];
+navList[1].innerHTML = siteContent['nav']['nav-item-2'];
+navList[2].innerHTML = siteContent['nav']['nav-item-3'];
+navList[3].innerHTML = siteContent['nav']['nav-item-4'];
+navList[4].innerHTML = siteContent['nav']['nav-item-5'];
+navList[5].innerHTML = siteContent['nav']['nav-item-6'];
+for(let i = 0; i < navList.length; i++) {
+  navList[i].style.color = 'green';
+}
+
+const h1 = document.querySelector('h1');
+h1.innerHTML = `DOM<br>Is<br>Awesome`;
+
+const button = document.querySelector('button');
+button.innerHTML = siteContent['cta']['button'];
+
+const h4List = document.querySelectorAll('h4');
+h4List[0].innerHTML = siteContent['main-content']['features-h4'];
+h4List[1].innerHTML = siteContent['main-content']['about-h4'];
+h4List[2].innerHTML = siteContent['main-content']['services-h4'];
+h4List[3].innerHTML = siteContent['main-content']['product-h4'];
+h4List[4].innerHTML = siteContent['main-content']['vision-h4'];
+h4List[5].innerHTML = siteContent['contact']['contact-h4'];
+
+const pList = document.querySelectorAll('p');
+pList[0].innerHTML = siteContent['main-content']['features-content'];
+pList[1].innerHTML = siteContent['main-content']['about-content'];
+pList[2].innerHTML = siteContent['main-content']['services-content'];
+pList[3].innerHTML = siteContent['main-content']['product-content'];
+pList[4].innerHTML = siteContent['main-content']['vision-content'];
+pList[5].innerHTML = `123 Way 456 Street<br>Somewhere, USA`;
+pList[6].innerHTML = siteContent['contact']['phone'];
+pList[7].innerHTML = siteContent['contact']['email'];
+pList[8].innerHTML = siteContent['footer']['copyright'];

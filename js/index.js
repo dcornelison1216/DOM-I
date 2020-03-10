@@ -62,7 +62,7 @@ const h1 = document.querySelector('h1');
 h1.innerHTML = `DOM<br>Is<br>Awesome`;
 
 const button = document.querySelector('button');
-button.innerHTML = siteContent['cta']['button'];
+button.innerHTML = `How Awesome?`;
 
 const h4List = document.querySelectorAll('h4');
 h4List[0].innerHTML = siteContent['main-content']['features-h4'];
@@ -95,7 +95,7 @@ prepended.textContent = "Prepended";
 nav.prepend(prepended);
 prepended.style = "color: green";
 
-// Stretch work
+// Stretch goal: update styles throughout the page
 
 for(let i = 0; i < h4List.length; i++) {
   h4List[i].style = "color: green";
@@ -112,5 +112,14 @@ button.addEventListener('mouseleave', e => {
 });
 h1.style = "color: green";
 
-// const mainContent = document.getElementByClassName('main-content');
-// mainContent.style = "border-color: green";
+
+// Stretch goal: update site content with button
+
+button.addEventListener('click', (event) => {
+  if(h1.innerHTML === `DOM<br>Is<br>Awesome`) {
+    h1.innerHTML = `So<br>Awesome<br>Right!?`
+    button.innerHTML = `Wait, What?`;
+  } else if (h1.innerHTML === `So<br>Awesome<br>Right!?`) {
+    h1.innerHTML = `DOM<br>Is<br>Awesome`;
+    button.innerHTML = `How Awesome?`;
+  }});

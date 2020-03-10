@@ -82,3 +82,32 @@ pList[5].innerHTML = `123 Way 456 Street<br>Somewhere, USA`;
 pList[6].innerHTML = siteContent['contact']['phone'];
 pList[7].innerHTML = siteContent['contact']['email'];
 pList[8].innerHTML = siteContent['footer']['copyright'];
+
+const nav = document.querySelector('nav');
+
+const appended = document.createElement('a');
+appended.textContent = "Appended";
+nav.appendChild(appended);
+appended.style = "color: green";
+
+const prepended = document.createElement('a');
+prepended.textContent = "Prepended";
+nav.prepend(prepended);
+prepended.style = "color: green";
+
+// Stretch work
+
+for(let i = 0; i < h4List.length; i++) {
+  h4List[i].style = "color: green";
+}
+for(let i = 0; i < pList.length; i++) {
+  pList[i].style = "color: darkgreen";
+}
+button.style = "border-color: green; color: green";
+button.hover(function() {
+  $(this).css("background-color", "green");
+} function() {
+  $(this).css("color", "white");
+});
+// const mainContent = document.getElementByClassName('main-content');
+// mainContent.style = "border-color: green";

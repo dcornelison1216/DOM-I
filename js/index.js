@@ -104,10 +104,13 @@ for(let i = 0; i < pList.length; i++) {
   pList[i].style = "color: darkgreen";
 }
 button.style = "border-color: green; color: green";
-button.hover(function() {
-  $(this).css("background-color", "green");
-} function() {
-  $(this).css("color", "white");
+button.addEventListener('mouseenter', e => {
+  button.style = 'background: green; color: white; border-color: green';
 });
+button.addEventListener('mouseleave', e => {
+  button.style = 'background: white; color: green; border-color: green';
+});
+h1.style = "color: green";
+
 // const mainContent = document.getElementByClassName('main-content');
 // mainContent.style = "border-color: green";
